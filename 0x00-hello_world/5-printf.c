@@ -1,8 +1,14 @@
-) #include <stdio.h>
+#include <stdio.h>
 
 /**
 
- * main - main block
+ * main – print the string in the put function
+
+*
+
+*Description: using the main function
+
+*The program will print “Programming is like building a puzzle
 
  * Return: 0
 
