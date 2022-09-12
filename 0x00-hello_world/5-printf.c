@@ -8,7 +8,7 @@
 
 *Description: using the main function
 
-*The program will print “Programming is like building a puzzle
+*this program prints “Programming is like building a multilingual puzzle
 
  * Return: 0
 
@@ -18,9 +18,9 @@ int main(void)
 
 {
 
-	printf("with proper grammar, but the outcome is a piece of art,\n");
+printf("with proper grammar, but the outcome is a piece of art,\n");
 
-	return (0);
+return (0);
 
 }
 
