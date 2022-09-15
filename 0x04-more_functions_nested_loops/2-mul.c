@@ -4,15 +4,19 @@
 
 /**
 
-*mul - multiplies two numbers
+ * mul - function that multiplies two integers
 
-*@a: first number
+ *
 
-*@b: second number
+ * @a: an integer  type
 
-*Return: returns result
+ * @b: an integer integer
 
-*/
+ *
+
+ * Return: return 0 on success and 1 on fail
+
+ */
 
 
 
@@ -20,6 +24,10 @@ int mul(int a, int b)
 
 {
 
-	return (a * b);
+	int m = a * b;
+
+
+
+	return (m);
 
 }
