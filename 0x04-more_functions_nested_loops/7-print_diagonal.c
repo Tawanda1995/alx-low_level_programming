@@ -1,65 +1,61 @@
-#include <stdio.h>
-
 #include "main.h"
 
 
 
 /**
 
-*print_diagonal - prints a diagonal
+ * print_diagonal - Print a diagonal if the number is positive.
 
-*@n: parameter
+ * @n: The character to be count.
 
-*Return: returns nothing
+ *
 
-*/
+ * Return: To the value of c.
 
-
+ */
 
 void print_diagonal(int n)
 
 {
 
-	int len, space;
+int i;
 
+int j;
 
+if (n <= 0)
 
-	if (n > 0)
+{
 
-	{
+_putchar('\n');
 
-		for (len = 0; len < n; len++)
+}
 
-		{
+else
 
-			for (space = 0; space < len; space++)
+{
 
-			{
+_putchar('\\');
 
-				putchar(' ');
+_putchar('\n');
 
-			}
+for (i = 0; i < (n - 1); i++)
 
+{
 
+for (j = i; j >= 0; j--)
 
-			putchar('\\');
+{
 
+_putchar(' ');
 
+}
 
-			if (len == (n - 1))
+_putchar('\\');
 
-			{
+_putchar('\n');
 
-				continue;
+}
 
-			}
-
-			putchar('\n');
-
-		}
-
-	}
-
-	putchar('\n');
+}
 
 }
