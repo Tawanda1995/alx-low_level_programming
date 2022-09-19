@@ -4,21 +4,21 @@
 
 /**                                                                    
 
-* reversing a string                                                   
+* rev_string > reversing a string                                                   
 
-*2s parameter                                                          
+*@s parameter s                                                         
 
-*/                                                                     
+*/                                                                      
 
-                                                                       
-
-void rev_string (char *s)                                              
+void rev_string(char *s)                                              
 
 {                                                                      
 
         char tmp;                                                      
 
-        int i, length1, length2;                                       
+        int i, length1, length2;
+
+                                     
 
         length1 =0;                                                    
 
@@ -32,15 +32,15 @@ void rev_string (char *s)
 
                                                                        
 
-        length2 = length1 - 1;                                         
+        length2 = length1 - 1;                                      
 
-            for (i = 0; i < length1 /2; i++)                           
+	for (i = 0; i < length1 /2; i++)                           
 
         {                                                              
 
                 tmp = s[i];                                            
 
-                s[i] = s [length2];                                    
+                s[i] = s[length2];                                    
 
                 s[length2] = tmp;                                      
 
