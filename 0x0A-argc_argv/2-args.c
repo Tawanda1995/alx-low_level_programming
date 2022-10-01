@@ -1,48 +1,45 @@
-#include <stdio.h>                                                                                                                   
+#include <stdio.h>
 
-#include "main.h"                                                                                                                    
+#include <stdlib.h>
 
-                                                                                                                                     
+/**
 
-/**                                                                                                                                  
+ * main - program that prints its name, followed by a new line
 
- * main - Print the name of the program                                                                                              
+ * @argc: argument that counts argument input
 
- * @argc: Count arguments                                                                                                            
+ * @argv: argument that stores the strings in an array of char* (strings)
 
- * @argv: Arguments                                                                                                                  
+ * Return: 0
 
- *                                                                                                                                   
+ */
 
- * Return: Always 0 (Success)                                                                                                        
+int main(int argc, char *argv[])
 
- */                                                                                                                                  
+{
 
-                                                                                                                                     
+	int num_1, num_2, mul;
 
-int main(int argc, char *argv[])                                                                                                     
 
-{                                                                                                                                    
 
-                                                                                                                                     
+	if (argc != 3)
 
-/*Declaring variables*/                                                                                                              
+		printf("Error\n");
 
-int count = 0;                                                                                                                       
+	else
 
-                                                                                                                                     
+	{
 
-if (argc > 0)                                                                                                                        
+		num_1 = atoi(argv[1]);
 
-{                                                                                                                                    
+		num_2 = atoi(argv[2]);
 
-/*WHILE - Print each arguments*/                                                                                                     
+		mul = num_1 * num_2;
 
-while (count < argc)                                                                                                                 
+		printf("%d\n", mul);
 
-{                                                                                                                                    
+	}
 
-printf("%s\n", argv[count]);
-}
-}
+	return (0);
+
 }
