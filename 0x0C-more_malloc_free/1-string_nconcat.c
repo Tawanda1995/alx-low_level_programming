@@ -1,43 +1,123 @@
-#include "main.h"
 #include <stdlib.h>
 
-/**
- * string_nconcat - concatenates two strings.
- * @s1: first string to copy
- * @s2: second string to copy
- * @n: numbert of bytes of s2 to copy
- * 
- * Return: char pointer to newly allocated place in memory
- */
-char *string_nconcat(char *s1, char *s2, unsigned int n);
-{
-	unsigned int i, j, k;
-	char *s;
+#include "main.h"
 
-	if (s1 == NULL)
-		i = 0;
-	else
-	{
-		for (i = 0; s1[i]; i++)
-		;
-	}
-	if (s2 == NULL)
-		j = 0;
-	else
-	{	
-		for (j = 0; s2[j]; j++)
-			;
-	}
-	if (j > n)
-		j = n;
-	s = malloc(sizeof(char) * (i + j +1));
-	if (s == NULL)
-		return (NULL);
-	for (k = 0; k < i; k++)
-		s[k] = s1[k];
-	for (k = o; k < j; k++)
-		s[k + i] = s2[k];
-	s[i + j] = '\0';
-	return (s);
+
+
+/**
+
+* _strlen - function that returns length or string
+
+* @str: string to return length
+
+* Return: Int (length)
+
+*
+
+*/
+
+
+
+int _strlen(char *str)
+
+{
+
+int count;
+
+
+
+for (count = 0; str[count] != '\0';)
+
+count++;
+
+return (count);
+
 }
 
+
+
+/**
+
+* string_nconcat - a function that concatenates two strings.
+
+* @s1: String 1 to concatenate
+
+* @s2: String 2 to concatenate
+
+* @n: he first n bytes of s2
+
+* Return: Pointer | NULL
+
+*/
+
+
+
+char *string_nconcat(char *s1, char *s2, unsigned int n)
+
+{
+
+int count, count1;
+
+int sign = n;
+
+char *ptr;
+
+int len1, len2;
+
+
+
+if (s1 == NULL)
+
+s1 = "";
+
+if (s2 == NULL)
+
+s2 = "";
+
+
+
+len1 = _strlen(s1);
+
+len2 = _strlen(s2);
+
+
+
+if (sign >= len2)
+
+{
+
+sign = len2;
+
+ptr = malloc(sizeof(char) * (len1 + len2 + 1));
+
+}
+
+else
+
+ptr = malloc(sizeof(char) * (len1 + n + 1));
+
+if (ptr == NULL)
+
+return (NULL);
+
+for (count = 0; count < len1; count++)
+
+{
+
+ptr[count] = s1[count];
+
+}
+
+for (count1 = 0; count1 < sign; count1++)
+
+{
+
+ptr[count++] = s2[count1];
+
+}
+
+ptr[count++] = '\0';
+
+return (ptr);
+
+}
